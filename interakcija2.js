@@ -1,3 +1,45 @@
+var tablinks = document.getElementsByClassName("tab-link");
+var tabcontents = document.getElementsByClassName("tab-sadrzaj");
+
+function opentab(tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu() {
+    sidemenu.style.right = "0";
+}
+
+function closemenu() {
+    sidemenu.style.right = "-200px";
+}
+
+/*Sjena na menu*/
+window.onscroll = function () { headerShadow() };
+
+function headerShadow() {
+    const navHeader = document.getElementById("izbornik");
+
+    if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+        navHeader.style.boxShadow = " 0px 4px 6px rgba(66, 122, 93, 0.1)";
+        navHeader.style.transition = "all 0.3s ease"
+    } else {
+        navHeader.style.boxShadow = "none";
+        navHeader.style.hackgroundColor = "transparent"
+    }
+}
+
+
 const sr = ScrollReveal({
     origin: 'top',
     distance: '80px',
