@@ -614,6 +614,8 @@ footer{
 
     .project-col-1, .project-col-2{
         flex-basis: 100%;
+        justify-content: center;
+        align-items: center;
     }
     
     .project-col-1{
@@ -623,6 +625,21 @@ footer{
     .project-col-2 img{
         width: 100%;
     }
+
+    .my-project{
+        align-items: center;
+    }   
+
+    .middle-footer .footer-menu{
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .footer-menu-list{
+        list-style:none;
+    }
+
+
 
 
 }
